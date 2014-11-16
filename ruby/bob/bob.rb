@@ -1,13 +1,8 @@
 class Bob
   def hey(arg)
-    if arg == arg.upcase && arg =~ /[a-zA-Z]/
-      'Whoa, chill out!'
-    elsif arg =~ /\?\z/
-      'Sure.'
-    elsif arg =~ /[0-9a-f]/
-      "Whatever."
-    else
-      'Fine. Be that way!'
-    end
+    return 'Whoa, chill out!' if arg =~ /[a-zA-Z]/ && arg == arg.upcase
+    return 'Sure.' if arg =~ /\?\z/
+    return 'Whatever.' if arg =~ /[0-9a-f]/
+    'Fine. Be that way!'
   end
 end
