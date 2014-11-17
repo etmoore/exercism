@@ -1,8 +1,27 @@
 class Bob
-  def hey(arg)
-    return 'Whoa, chill out!' if arg =~ /[a-zA-Z]/ && arg == arg.upcase
-    return 'Sure.' if arg =~ /\?\z/
-    return 'Whatever.' if arg =~ /[0-9a-f]/
-    'Fine. Be that way!'
+  def hey(statement)
+    if shouting?(statement)
+      'Whoa, chill out!'
+    elsif question?(statement)
+      'Sure.'
+    elsif silence?(statement)
+      'Fine. Be that way!'
+    else
+      'Whatever.'
+    end
   end
+
+  private
+
+    def shouting? statement
+      statement =~ /[a-zA-Z]/ && statement == statement.upcase
+    end
+
+    def question? statement
+      statement.end_with?("?")
+    end
+
+    def silence? statement
+      statement.strip.empty?
+    end
 end
