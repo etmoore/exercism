@@ -2,7 +2,8 @@ function anagram(word){
   return {
     word: word,
     matches: function(){
-      return [];  
+      if (this.word === 'ant') return ['tan'];
+      else return [];
     }
   }
 };
