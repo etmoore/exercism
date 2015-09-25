@@ -3,6 +3,9 @@ function School(){
 };
 
 School.prototype.roster = function(){
+  for (grade in this.gradeLevels) {
+    this.gradeLevels[grade] = this.gradeLevels[grade].sort();
+  }
   return this.gradeLevels;
 };
 School.prototype.add = function(student, grade){
