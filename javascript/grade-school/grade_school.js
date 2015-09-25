@@ -12,7 +12,8 @@ School.prototype.add = function(student, grade){
   this.gradeLevels[grade].push(student);
 };
 School.prototype.grade = function(grade){
-  return this.gradeLevels[grade].sort();
+  var students = this.gradeLevels[grade];
+  return students ? students.sort() : [];
 }
 
 module.exports = School;
