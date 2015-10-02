@@ -7,7 +7,7 @@ describe('accumulate()', function() {
     expect([]).toEqual(accumulate([], accumulator));
   });
 
-  xit('accumulate squares', function() {
+  it('accumulate squares', function() {
     var accumulator = function(number) {
       return number * number;
     };
