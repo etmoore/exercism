@@ -29,4 +29,8 @@ Robot.prototype.newName = function(){
   return name;
 };
 
+Robot.prototype.reset = function(){
+  this.name = this.newName();
+};
+
 module.exports = Robot;
