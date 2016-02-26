@@ -7,15 +7,11 @@ function anagram(word){
         targetWords = Array.prototype.slice.call(arguments);
       }
 
-      var matches = [];
       var sourceWord = this.word;
-      for (var i = 0; i < targetWords.length; i++){
-        var targetWord = targetWords[i];
-        if (avgChars(sourceWord) === avgChars(targetWord)){
-          matches.push(targetWord);
-        }
-      }
-      return matches;
+
+      return targetWords.filter(function(targetWord){
+        return avgChars(sourceWord) === avgChars(targetWord);
+      });
     }
   }
 };
