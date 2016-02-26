@@ -10,13 +10,13 @@ function anagram(word){
       var sourceWord = this.word;
 
       return targetWords.filter(function(targetWord){
-        return avgChars(sourceWord) === avgChars(targetWord);
+        return avgCharValue(sourceWord) === avgCharValue(targetWord);
       });
     }
   }
 };
 
-var avgChars = function(string){
+var avgCharValue = function(string){
   var sum = 0;
   for (var i = 0; i < string.length; i++){
     sum += string.charCodeAt(i)
