@@ -1,6 +1,12 @@
-var Allergies = function(){};
+var Allergies = function(score){
+  this.allergenList = [];
+  if (score === 1) {
+    this.allergenList.push('eggs');
+  }
+};
+
 Allergies.prototype.list = function(){
-  return [];
+  return this.allergenList;
 };
 
 module.exports = Allergies;
