@@ -12,7 +12,7 @@ describe('Allergies',function() {
     expect(allergies.list()).toEqual([ 'eggs' ]);
   });
 
-  xit('allergies to peanuts', function() {
+  it('allergies to peanuts', function() {
     var allergies = new Allergies(2);
     expect(allergies.list()).toEqual([ 'peanuts' ]);
   });

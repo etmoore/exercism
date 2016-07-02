@@ -1,6 +1,9 @@
 var Allergies = function(score){
   this.allergenList = [];
-  if (score === 1) {
+  if (score === 2){
+    this.allergenList.push('peanuts');
+  }
+  if (score === 1){
     this.allergenList.push('eggs');
   }
 };
