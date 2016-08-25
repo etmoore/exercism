@@ -1,11 +1,11 @@
 function randomLetter(){
   var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  return letters[Math.floor(Math.random() * letters.length + 1)];
+  return letters[Math.floor(Math.random() * letters.length)];
 }
 
 function randomNumber(){
   var numbers = "01234567890";
-  return numbers[Math.floor(Math.random() * numbers.length + 1)];
+  return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
 function Robot(){
