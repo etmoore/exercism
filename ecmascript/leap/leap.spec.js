@@ -14,12 +14,12 @@ describe('A leap year', () => {
     expect(isLeapYear(1900)).toBeFalsy();
   });
 
-  xit('is reintroduced every 400 years to adjust another day', () => {
+  it('is reintroduced every 400 years to adjust another day', () => {
     expect(isLeapYear(2000)).toBeTruthy();
   });
 
   // Feel free to enable the following tests to check some more examples
-  xdescribe('Additional example of a leap year that', () => {
+  describe('Additional example of a leap year that', () => {
 
     it('is not a leap year', () => {
       expect(isLeapYear(1978)).toBeFalsy();
