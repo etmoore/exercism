@@ -1,7 +1,7 @@
 function isLeapYear(year){
-  if (year == 2015)
-    return false;
-  else
+  if (year % 4 === 0 && year % 100 !== 0)
     return true;
+  else
+    return false;
 }
 module.exports = isLeapYear;
