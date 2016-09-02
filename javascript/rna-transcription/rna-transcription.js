@@ -10,6 +10,8 @@ DnaTranscriber.prototype.toRna = function(dna){
     return 'C';
   if (dna === 'A')
     return 'U';
+  if (dna === 'T')
+    return 'A';
   return 'G';
 };
 
