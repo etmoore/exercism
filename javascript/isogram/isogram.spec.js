@@ -13,13 +13,13 @@ describe('Isogram Test Suite', function () {
     expect(word.isIsogram()).toEqual(false);
   });
 
-  xit('subdermatoglyphic', function () {
+  it('subdermatoglyphic', function () {
     var word = new Isogram('subdermatoglyphic');
 
     expect(word.isIsogram()).toEqual(true);
   });
 
-  xit('Alphabet', function () {
+  it('Alphabet', function () {
     var word = new Isogram('Alphabet');
 
     expect(word.isIsogram()).toEqual(false);
