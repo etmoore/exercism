@@ -1,15 +1,19 @@
 function Isogram(word){
-  this.word = word.toLowerCase();
+  this.word = word;
 };
-Isogram.prototype.isIsogram = function(){
-  var letterCount = {};
 
-  for (var i = 0; i < this.word.length; i++){
-    var letter = this.word[i];
-    if (letterCount[letter] && letter !== '-') return false;
-    else letterCount[letter] = true;
+Isogram.prototype.isIsogram = function() {
+
+  var cleanChars = this.word.toLowerCase().split('').filter(function(c) {
+    return c !== ' ' && c !== '-';
+  });
+
+  charRegister = {};
+  for (var i = 0; i < cleanChars.length; i++) {
+    var c = cleanChars[i];
+    if (charRegister[c]) return false;
+    else charRegister[c] = true;
   }
-
   return true;
 };
 
