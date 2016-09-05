@@ -6,7 +6,7 @@ Isogram.prototype.isIsogram = function(){
 
   for (var i = 0; i < this.word.length; i++){
     var letter = this.word[i];
-    if (letterCount[letter]) return false;
+    if (letterCount[letter] && letter !== '-') return false;
     else letterCount[letter] = true;
   }
 
