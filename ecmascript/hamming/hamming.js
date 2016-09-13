@@ -1,6 +1,7 @@
 class Hamming {
-  compute() {
-    return 0;
+  compute(a, b) {
+    if (a === b) return 0;
+    else return 1;
   }
 }
 module.exports = Hamming;
