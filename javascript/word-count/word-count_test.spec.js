@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 var words = require('./word-count');
 
 describe("words()", function() {
