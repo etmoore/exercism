@@ -1,7 +1,8 @@
 const translations = {
   C: 'G',
   G: 'C',
-  A: 'U'
+  A: 'U',
+  T: 'A'
 }
 
 class Transcriptor {
