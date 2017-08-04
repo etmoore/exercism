@@ -30,7 +30,7 @@ describe('Transcriptor', () => {
     );
   });
 
-  xtest('correctly handles completely invalid input', () => {
+  test('correctly handles completely invalid input', () => {
     expect(() => transcriptor.toRna('XXX')).toThrow(
       new Error('Invalid input DNA.'),
     );
