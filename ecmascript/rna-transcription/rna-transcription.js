@@ -1,5 +1,12 @@
+const translations = {
+  C: 'G',
+  G: 'C'
+}
+
 class Transcriptor {
-  toRna () { return 'G' }
+  toRna (input) {
+    return translations[input]
+  }
 }
 
 export default Transcriptor
