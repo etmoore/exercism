@@ -1,6 +1,7 @@
 class Bob {
   hey (message) {
-    return 'Whatever.'
+    if (message === message.toUpperCase()) return 'Whoa, chill out!'
+    else return 'Whatever.'
   }
 }
 
