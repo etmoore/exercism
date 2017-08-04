@@ -14,7 +14,8 @@ class Transcriptor {
   }
 
   transcribe (letter) {
-    return translations[letter]
+    if (!translations[letter]) throw new Error('Invalid input DNA.')
+    else return translations[letter]
   }
 }
 
