@@ -7,7 +7,14 @@ const translations = {
 
 class Transcriptor {
   toRna (input) {
-    return translations[input]
+    return input
+      .split('')
+      .map(this.transcribe)
+      .join('')
+  }
+
+  transcribe (letter) {
+    return translations[letter]
   }
 }
 
