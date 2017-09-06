@@ -8,15 +8,12 @@ const translations: {[key: string]: string} = {
 
 class Transcriptor {
   toRna (dna: string): string {
-    const letters = dna.split('')
-    const rnaLetters = letters.map((letter) => {
+    return dna.split('').map((letter) => {
       if (translations[letter] === undefined) 
         throw new Error('Invalid input DNA.')
       else
         return translations[letter] 
-    })
-    const rnaString = rnaLetters.join('')
-    return rnaString
+    }).join('')
   }
 }
 
